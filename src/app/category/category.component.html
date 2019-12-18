@@ -1,0 +1,18 @@
+<div class="row">
+  <h2>Category Photos</h2>
+
+  <br><br>
+  <div class="row">
+      <div *ngFor="let category of visibleCategories">
+          <div class="col-md-3">
+              <div class="card" style="width: 18rem;">
+                  <img src="{{category.url}}" class="card-img-top" alt="..." width="200" height="160">
+                  <div class="card-body">
+                      <a [routerLink]="['/category', category.caption]" class="card-title" >{{category.caption}}</a>
+                      <p class="card-text">{{category.aciklama}}.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
