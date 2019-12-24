@@ -11,7 +11,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ReferenceComponent } from './reference/reference.component';
 import { appRoutes } from '../routes';
 import { CategoryComponent } from './category/category.component';
-import { SelectCategoryComponent } from './select-category/select-category.component'
+import { SelectCategoryComponent } from './select-category/select-category.component';
+import { SelectGaleryComponent } from './select-galery/select-galery.component';
+import { AboutusComponent } from './aboutus/aboutus.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { SelectCategoryComponent } from './select-category/select-category.compo
     ImageFilterPipe,
     CategoryComponent,
     SelectCategoryComponent,
-    ReferenceComponent
+    ReferenceComponent,
+    SelectGaleryComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
-//import { ImageService } from '../image/shared/image.service';
 import { ActivatedRoute } from '@angular/router'
 import { GaleryService } from '../services/galery.service';
 import { Galery } from 'app/services/galery';
@@ -12,30 +11,20 @@ import { Galery } from 'app/services/galery';
 })
 export class SelectCategoryComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute,private galeryService: GaleryService) {
-    console.log(this.filterBy)
-    console.log(this.route.snapshot.params['category'])
-  }
-  
+  constructor(private route: ActivatedRoute, private galeryService: GaleryService) {}
+
   filterBy?: number = 0
   galeries: Galery[];
-  filterText: number;
-  today = new Date(2019, 11, 18)
   ngOnInit() {
-
-    if (this.route.snapshot.params['category']==null) {
-      console.log("bi bok yok burda")
-    }else{
-      console.log(this.route.snapshot.params['category'])
-    }
-
     this.getGaleries();
+    console.log(this.route.snapshot.params['category'])
+    this.filterBy = this.route.snapshot.params['category']
   }
   getGaleries() {
-     this.galeryService.getGaleries().subscribe(data => {
-       console.log(data)
-       this.galeries = data;
-     })
+    this.galeryService.getGaleries().subscribe(data => {
+      console.log(data)
+      this.galeries = data;
+    })
   }
 
 }

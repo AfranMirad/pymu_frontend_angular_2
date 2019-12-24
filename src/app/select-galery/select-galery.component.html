@@ -1,0 +1,19 @@
+<div class="row">
+    <h2>Job Photos</h2>
+    <br><br>
+    <div class="row">
+        <div *ngFor="let galery of galeries">
+            <div *ngIf="galery.id == filterBy">
+                <div class="col-md-6">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{galery.job_picture}}" class="card-img-top" alt="..." width="500" height="400">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h5>{{galery.job_name}}</h5>
+                    <p>Bu bir {{galery.category}} türünde resimdir.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
