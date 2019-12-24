@@ -1,0 +1,18 @@
+<div class="row">
+  <h2>Reference Photos</h2>
+  <br><br>
+  <div class="row">
+    <div *ngFor="let reference of references">
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+          <img src="{{reference.ref_picture}}" class="card-img-top" alt="..." width="200" height="160">
+          <div class="card-body">
+            <!-- <a [routerLink]="['/', reference.reference_name]" class="card-title">{{reference.reference_name}}</a> -->
+            <p class="card-text">{{reference.reference_name}}</p>
+            <p class="card-text">{{reference.ref_description}}.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

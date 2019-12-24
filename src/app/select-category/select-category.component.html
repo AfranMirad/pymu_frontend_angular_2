@@ -1,19 +1,36 @@
 <div class="row">
-  <h2>{{filterBy}} Photos</h2>
+    <h2>Galery Photos</h2>
+    <!-- 
+    <br><br>
+    <div class="row">
+        <div *ngFor="let galery of galeries">
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{galery.job_picture}}" class="card-img-top" alt="..." width="200" height="160">
+                    <div class="card-body">
+                        <a class="card-title" [class.active]="filterBy=== image.caption" (click)="filterBy= image.caption" >{{image.caption}}</a>
+                        <h5>{{galery.job_name}}</h5>
+                        <p class="card-text">{{galery.category}} Kategorosinden.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
 
-  <br><br>
-  <div class="row">
-      <div *ngFor="let image of (visibleImages | imageFilter: filterBy)">
-          <div class="col-md-3">
-              <div class="card" style="width: 18rem;">
-                  <img src="{{image.url}}" class="card-img-top" alt="..." width="200" height="160">
-                  <div class="card-body">
-                      <!-- <a class="card-title" [class.active]="filterBy=== image.caption" (click)="filterBy= image.caption" >{{image.caption}}</a> -->
-                    <h5>{{image.caption}}</h5>
-                      <p class="card-text">Bu bir {{filterBy}} türünde resimdir.</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+
+    <br><br>
+    <div class="row">
+        <div *ngFor="let galery of (galeries | imageFilter: filterBy)">
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{galery.job_picture}}" class="card-img-top" alt="..." width="200" height="160">
+                    <div class="card-body">
+                        <a class="card-title" [class.active]="filterBy=== galery.category" (click)="filterBy= galery.category">{{galery.category}}</a>
+                        <h5>{{galery.job_name}}</h5>
+                        <p class="card-text">Bu bir {{galery.category}} türünde resimdir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

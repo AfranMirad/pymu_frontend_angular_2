@@ -2,11 +2,10 @@ import { Pipe, PipeTransform } from '@angular/core'
 
 @Pipe({name: 'imageFilter'})
 export class ImageFilterPipe implements PipeTransform {
-    visibleImages: any[] = [];
-    transform(items: any[], criteria: string): any {
-    if(criteria === 'all'){ return items } else
+  transform(items: any[], criteria: number): any {
+    if(criteria === 0){ return items } else
     return items.filter(item =>{
-      return null
+      return item.category === criteria;
     });
   }
 }
