@@ -8,7 +8,7 @@
                     <div class="card" style="width: 18rem;">
                         <img src="{{galery.job_picture}}" class="card-img-top" alt="..." width="200" height="160">
                         <div class="card-body">
-                            <a [routerLink]="['/job', galery.id]" class="card-title">{{galery.job_name}}</a>
+                            <a [routerLink]="['/job', galery.id]" class="card-title">{{galery.job_name | uppercase}}</a>
                             <p class="card-text">Bu bir {{galery.category}} türünde resimdir.</p>
                         </div>
                     </div>

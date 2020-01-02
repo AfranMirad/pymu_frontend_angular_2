@@ -13,7 +13,7 @@ import { appRoutes } from '../routes';
 import { CategoryComponent } from './category/category.component';
 import { SelectCategoryComponent } from './select-category/select-category.component';
 import { SelectGaleryComponent } from './select-galery/select-galery.component';
-import { AboutusComponent } from './aboutus/aboutus.component'
+import { FooterComponent } from './footer/footer.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { AboutusComponent } from './aboutus/aboutus.component'
     SelectCategoryComponent,
     ReferenceComponent,
     SelectGaleryComponent,
-    AboutusComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
