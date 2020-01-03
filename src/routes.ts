@@ -3,6 +3,7 @@ import { SelectCategoryComponent } from "../src/app/select-category/select-categ
 import { CategoryComponent } from "../src/app/category/category.component"
 import { ReferenceComponent } from "app/reference/reference.component"
 import { SelectGaleryComponent } from "app/select-galery/select-galery.component"
+import { HomepageComponent } from "app/homepage/homepage.component"
 
 export const appRoutes: Routes = [
   { path: "category", component: CategoryComponent },
@@ -10,5 +11,6 @@ export const appRoutes: Routes = [
   { path: "galery", component: SelectCategoryComponent },
   { path: "reference", component: ReferenceComponent },
   { path: "job/:galery", component: SelectGaleryComponent },
-  { path: "", redirectTo: "/category", pathMatch: 'full' },
+  { path: "home", component: HomepageComponent },
+  { path: "", redirectTo: "/home", pathMatch: 'full' },
 ]

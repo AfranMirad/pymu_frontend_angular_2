@@ -13,7 +13,8 @@ import { appRoutes } from '../routes';
 import { CategoryComponent } from './category/category.component';
 import { SelectCategoryComponent } from './select-category/select-category.component';
 import { SelectGaleryComponent } from './select-galery/select-galery.component';
-import { FooterComponent } from './footer/footer.component'
+import { FooterComponent } from './footer/footer.component';
+import { HomepageComponent } from './homepage/homepage.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FooterComponent } from './footer/footer.component'
     SelectCategoryComponent,
     ReferenceComponent,
     SelectGaleryComponent,
-    FooterComponent
+    FooterComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
